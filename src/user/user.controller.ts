@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { UserService } from './user.service';
 import { ApiOperation } from '@nestjs/swagger';
 import { loginDto, registerDto } from './dto/registerDto.dto';
@@ -24,6 +24,17 @@ export class UserController {
     // this.logger.log(`[register] started`, dto);
 
     const data = this.userService.login(dto);
+
+    return data;
+  }
+
+  @ApiOperation({ summary: 'view user detail' })
+  @Get(':id')
+  viewUserDetail(@Param('id') id: string) {
+    // this.logger.log(`[register] started`, dto);
+    console.log('dto===', id);
+
+    const data = this.userService.viewUserDetail(id);
 
     return data;
   }

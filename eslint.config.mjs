@@ -35,8 +35,11 @@ export default tseslint.config(
       ],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
-      '@typescript-eslint/no-unsafe-argument': 'warn',
-      // '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'error',
+      // fix no-unsafe-call
+      '@typescript-eslint/no-unsafe-call': 'error',
+      'require-await': 'off',
+      '@typescript-eslint/require-await': 'error',
     },
   },
 );
