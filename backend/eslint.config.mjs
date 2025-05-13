@@ -40,6 +40,10 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-call': 'error',
       'require-await': 'off',
       '@typescript-eslint/require-await': 'error',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
+      'no-console': 'off',
+      '@typescript-eslint/no-console': 'error',
     },
   },
 );

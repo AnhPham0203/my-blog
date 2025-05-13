@@ -96,11 +96,6 @@ export class UserService {
   }
 
   viewUserDetail(id: string) {
-    // try {
-    //   console.log('dto===', id);
-    //   return this.prisma.user.findUnique({ where: { id } });
-    // } catch (error) {
-    //   throw new Error('Method not implemented.');
-    // }
+    return this.prisma.user.findUnique({ where: { id } });
   }
 }
